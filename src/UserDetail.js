@@ -3,23 +3,23 @@ import React from 'react';
 
 
 //
-const CommentDetail = ( props ) => {
+const UserDetail = ( props ) => {
 
     console.log(props);
     //All of the props we have passed down from the parent
 
     return(
-        <div className="comment">
-            <a href="/" className="avatar">
+        <div>
+            <a href="/" className="image">
                 <img src={ props.avatar } alt="avatar" />    
             </a>
             <div className="content">
                 <a href="/" className="author">
-                    { props.author } 
+                    { props.userName } 
                 </a>
                 <div className="metadata">
                     <span className="date">
-                        { props.timeAgo }
+                        Joined in: { props.joinDate }
                     </span>
                 </div>
                 <div className="text">
@@ -30,4 +30,4 @@ const CommentDetail = ( props ) => {
     )
 }
 
-export default CommentDetail
+export default UserDetail
